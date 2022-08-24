@@ -28,7 +28,7 @@ Algunos de los hobbies que tengo son:
 
 | Jugar videojuegos | Ver peliculas |
 | -- | -- |
-| Ver series | Leer 
+| Ver series | Leer sobre la historia del mundo
 | Hacer ejercicio en tiempos libres| Hablar con mis amigos
-|
+
 
