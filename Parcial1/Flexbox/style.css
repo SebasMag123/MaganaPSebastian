@@ -1,0 +1,25 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+.contenedor{
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    background-color: green;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    align-items: center;
+}
+.caja{
+    background-color: gold;
+    margin: 10px;
+    text-align: center;
+    height: 100px;
+
+}
+#caja1{ flex-grow: 1;}
+#caja2{ flex-grow: 2;}
+#caja3{ flex-grow: 3;}
+#caja4{ flex-grow: 4;}
