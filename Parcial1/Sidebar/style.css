@@ -8,3 +8,10 @@
     width: 100vh;
     height: 100;
 }
+input {display: none;}
+input:checked +.sidebar{
+    width: 0px;
+}
+input:checked:--.contenedor{
+    margin-left: 0px;
+}
