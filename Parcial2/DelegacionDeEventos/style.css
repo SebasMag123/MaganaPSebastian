@@ -31,3 +31,9 @@
     text-align: center;
     border: 1px solid black;
 }
+.cambioColor{
+    background-color: green;
+    border: solid;
+    text-transform: uppercase;
+    text-align: right;
+}

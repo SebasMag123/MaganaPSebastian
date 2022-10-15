@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div id="ContP" class="contenedor">
+    <div id="cont" class="contenedor">
         <div id="enca" class="caja">Encabezado</div>
         <div id="menu" class="caja">Menu</div>
         <div id="col2" class="caja">Columna 2</div>
@@ -17,18 +17,14 @@
 
     </div>
     <script>
-        window.onload=function(){
-        var elem = document.getElementById("ContP");
-        elem.addEventListener("Click",cambiarCaja);
-        function cambiarCaja(evento) {
-            console.log(evento);
-            if(document.getElementById(evento.target.id).classList.contains("caja"))
-            document.getElementById(evento.target.id).classList.toggle("caja")
+        window.onload=function()
+        {
+            document.getElementById("cont").addEventListener("click",function(evento){
+                console.log(evento.target.id)
+                if(evento.target.id !=="cont")
+                document.getElementById(evento.target.id).classList.toggle("cambioColor");
+            })
         }
-        if (evento.target.id=="enca"){
-            elem.removeEventListener("click",cambiarCaja);
-        }
-    }
     </script>
 </body>
 </html>
