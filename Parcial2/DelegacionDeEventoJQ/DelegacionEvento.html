@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="./jquery-3.6.1.min.js"></script>
+
+</head>
+<body>
+    <div id="cont" class="contenedor">
+        <div id="enca" class="caja">Encabezado</div>
+        <div id="menu" class="caja">Menu</div>
+        <div id="col2" class="caja">Columna 2</div>
+        <div id="col3" class="caja">Columna 3</div>
+        <div id="pie" class="caja">Pie </div>
+
+    </div>
+    <script>
+        // window.onload=function()
+        // {
+        //     document.getElementById("cont").addEventListener("click",function(evento){
+        //         console.log(evento.target.id)
+        //         if(evento.target.id !=="cont")
+        //         document.getElementById(evento.target.id).classList.toggle("cambioColor");
+        //     })
+        // }
+        $(document).ready(function(){
+            $("#cont").click(function(event){
+                $(event.target).html("Evento delegacion")
+            })
+        })
+    </script>
+</body>
+</html>

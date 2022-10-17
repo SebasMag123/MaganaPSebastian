@@ -1,0 +1,39 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+.contenedor{
+    display: grid;
+    width: 100vw;
+    height: 100vh;
+    background-color: green;
+    grid-template-columns: 30% 50% 20% 20%;
+    grid-template-rows: 25% 32.5% 22.5% 20%;
+    justify-content: stretch;
+    justify-items: stretch;
+    grid-auto-flow: row;
+    grid-template-areas: 'enca enca enca'
+                         'menu menu col2'
+                         'col3 col3 col2'
+                         'pie pie pie';
+}
+#enca{grid-area: enca;}
+#col1{grid-area: col1;}
+#col2{grid-area: col2;}
+#col3{grid-area: col3;}
+#menu{grid-area: menu;}
+#pie{grid-area: pie;}
+
+
+.caja{
+    background-color: gold;
+    text-align: center;
+    border: 1px solid black;
+}
+.cambioColor{
+    background-color: green;
+    border: solid;
+    text-transform: uppercase;
+    text-align: right;
+}
