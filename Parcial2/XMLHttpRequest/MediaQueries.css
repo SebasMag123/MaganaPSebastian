@@ -8,13 +8,6 @@
     height: 600px;
     background-color: whitesmoke;
 }
-#btnAjax{
-    background-color: brown;
-    border: 1px solid black;
-    height: 10px;
-    width: 20px;
-    padding: 50px;
-}
 /*Dejar espacio entre los operadores matematicos para que funcionen*/
 .caja{
     float: left;
