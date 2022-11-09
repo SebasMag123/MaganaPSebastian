@@ -1,10 +1,8 @@
-const Modulo= require("./Modulo.js");
 
-console.log(Modulo.cuadrado(20));
+var cowsay = require("cowsay");
 
-var cowsay=require("cowsay");
-console.log(cowsay.say)({
-    text:"Mensaje",
-    e:"oO",
-    T:"UU"
-});
+console.log(cowsay.say({
+    text : "I'm a moooodule",
+    e : "OO",
+    T : "U "
+}));
