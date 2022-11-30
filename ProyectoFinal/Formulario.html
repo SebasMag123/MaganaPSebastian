@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+</head>
+
+<body>
+    <h1>Registro de aviones de combate</h1>
+
+    <form id="formulario">
+        <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label">Nombre del avion</label>
+            <input type="text" class="form-control" id="exampleFormControlInput1"
+                placeholder="Inserte el nombre del avion" name="IdNombre">
+        </div>
+        <div class="row">
+            <div class="form-group col-sm-12 col-md-4">
+                <label for="Nombre" class="form-label">Nombre:</label>
+                <input type="text" class="form-control" id="Nombre" aria-describedby="emailHelp">
+            </div>
+            <div class="form-group col-sm-12 col-md-4">
+                <label for="Fabricante" class="form-label">Fabricante:</label>
+                <input type="text" class="form-control" id="Fabricante" aria-describedby="emailHelp">
+            </div>
+            <div class="form-group col-sm-12 col-md-4">
+                <label for="TipoAvion" class="form-label">Tipo de avion:</label>
+                <input type="text" class="form-control" id="TipoAvion" aria-describedby="emailHelp">
+            </div>
+        </div>
+        <div class="row">
+            <div class="form-group col-sm-12 col-md-4">
+                <label for="PrimerVuelo" class="form-label">Primer vuelo:</label>
+                <input type="text" class="form-control" id="PrimerVuelo" aria-describedby="emailHelp">
+            </div>
+            <div class="form-group col-sm-12 col-md-4">
+                <label for="Intro" class="form-label">Introducido:</label>
+                <input type="text" class="form-control" id="Intro" aria-describedby="emailHelp">
+            </div>
+            <div class="form-group col-sm-12 col-md-4">
+                <label for="NumCons" class="form-label">Numero de aviones construidos:</label>
+                <input type="text" class="form-control" id="NumCons" aria-describedby="emailHelp">
+            </div>
+        </div>
+        <div class="row">
+            <div class="form-group col-sm-12 col-md-4">
+                <label for="CostoPrograma" class="form-label">Costo del programa:</label>
+                <input type="text" class="form-control" id="CostoPrograma" aria-describedby="emailHelp">
+            </div>
+            <div class="form-group col-sm-12 col-md-4">
+                <label for="CostoUnit" class="form-label">Costo Unitario::</label>
+                <input type="text" class="form-control" id="CostoUnit" aria-describedby="emailHelp">
+            </div>
+            <div class="form-group col-sm-12 col-md-4">
+                <label for="CostoHora" class="form-label">Costo por hora de vuelo:</label>
+                <input type="text" class="form-control" id="CostoHora" aria-describedby="emailHelp">
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="exampleFormControlFile1">Inserte una imagen del avion</label>
+            <input type="file" class="form-control-file" id="exampleFormControlFile1">
+        </div>
+    </form>
+    <button id="btnGetReg" type="submit" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">Traer Registro</button>
+    <button id="btnConsultar" type="submit" class="btn btn-primary">Consultar</button>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+        crossorigin="anonymous"></script>
+</body>
+<script src="./app.js"></script>
+
+</html>
