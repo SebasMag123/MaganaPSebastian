@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="formulario">
+    <label for="nombre"></label>
+    <input id="nombre" name="nombre" type="text">
+    <input id="btn" type="button" value="Crear PDF">
+    </form>
+    <script>
+        document.getElementById("btn").addEventListener("click",async function(){
+            let headersList = {"Accept": "*/*",}
+            let formNombre=document.getElementById('formulario');
+            let bodyContent = new FormData(formNombre);
+
+            let response = await fetch("http://localhost/MaganaPSebastian/Parcial3/PDF/PDF.php", { 
+            method: "GET",
+            body: bodyContent,
+            headers: headersList
+            });
+
+            let data = await response.blob();
+            let archivoURL= URL.createObjectURL(data);
+            window.open(archivoURL);
+
+                    })
+    </script>
+</body>
+</html>
