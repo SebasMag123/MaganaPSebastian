@@ -7,28 +7,30 @@
     <title>Document</title>
 </head>
 <body>
-    <form action="formulario">
-    <label for="nombre"></label>
-    <input id="nombre" name="nombre" type="text">
-    <input id="btn" type="button" value="Crear PDF">
+    <form id="formulario">
+    <label for="nombre">Nombre</label>
+    <input type="text" id="nombre" name="nombre">
+    <label for="apellidos">Apellidos</label>
+    <input type="text" id="apellidos" name="apellidos">
+    <label for="sueldo">Sueldo</label>
+    <input type="text" id="sueldo" name="sueldo">
+    <label for="puesto">Puesto</label>
+    <input type="text" id="puesto" name="puesto">
+    <input type="button" value="Crear PDF" id="btn">
     </form>
     <script>
-        document.getElementById("btn").addEventListener("click",async function(){
-            let headersList = {"Accept": "*/*",}
-            let formNombre=document.getElementById('formulario');
-            let bodyContent = new FormData(formNombre);
-
-            let response = await fetch("http://localhost/MaganaPSebastian/Parcial3/PDF/PDF.php", { 
-            method: "GET",
-            body: bodyContent,
-            headers: headersList
-            });
-
-            let data = await response.blob();
-            let archivoURL= URL.createObjectURL(data);
-            window.open(archivoURL);
-
-                    })
+        document.getElementById('btn').addEventListener('click',async()=>{
+            const formelement=document.getElementById('formulario')
+             const form= new FormData(formelement);
+            const results= await fetch('PDF.php',{
+                method:'POST',
+                body:form
+            })
+            let data=await results.blob()
+            console.log(data)
+            let archivo =URL.createObjectURL(data)
+            window.open(archivo);
+        })
     </script>
 </body>
 </html>
